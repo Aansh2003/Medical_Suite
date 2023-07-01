@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanUpload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="StyleSheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-group" method="POST">
+            <h1 class="text-center">
+            </h1>
+            <div id="form">
+                <h3 class="text-white">User Details</h3>
+                <div id="input">
+                    <input type="text" id="input-group" placeholder="Full Name" name="fname" required><br>
+                    <input type="number" id="input-group" placeholder="Contact Number" name="contno" required>
+                </div><br>
+                <h3 class="text-white">Scan Details</h3>
+                <div id="input">
+                    <input type="text" id="input-group" placeholder="Upload Image" name="image" required>
+                </div>
+                <line>
+                    <input class="help" type="submit" value="Upload">
+                    <button class="help" type="reset" class="btn-primary">Clear Form</button>
+                </line>
+                <a href="/">
+                    <button class="styled">Back</button>
+                </a>
+                <p>{{message}}</p>
+                <p class="error">{{error}}</p>
+                <container2>
+                </container2>
+                <container3>
+                </container3>
+                <container4>
+                </container4>
+                <div class="dot1">
+
+                </div>
+                <div class="dot2">
+                    <div class="head"><b>How to use?</b></div>
+                    <p class="body">Fill out your basic information and upload the MRI scan of a brain. Our model will detect the
+                        presence of brain tumours and email the evaluation back to you within a couple of minutes.</p>
+                </div>
+                <span class="dot3"></span>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
