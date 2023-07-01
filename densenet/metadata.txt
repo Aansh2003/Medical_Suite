@@ -1,0 +1,21 @@
+Training Hyperparameters - 
+
+classes = ['no','yes']
+transforms = resize,normalize
+batch size = 32(Mini)
+learning rate = 1e-4
+L2 coefficient = 1e-1
+Optimizer = Adam
+Pre-trained = True
+
+Metrics - 
+
+Train time = 195m 10s
+Training accuracy = 98.6063%
+Validation accuracy = 93.9086%
+precision(no) = 86%
+precision(yes) = 97%
+recall(no) = 92%
+recall(yes) = 94%
+f1(no) = 89%
+f1(yes) = 96%
