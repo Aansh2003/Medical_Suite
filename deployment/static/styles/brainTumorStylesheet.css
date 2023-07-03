@@ -65,6 +65,71 @@ container4 {
     margin: 0 auto;
 }
 
+.body{
+    opacity:0;
+    cursor: default;
+    font-size: 9px;
+    transition-delay: 0.8s;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in;
+    position: relative;
+    top:21%;
+    left:24%;
+}
+
+.body_2{
+    opacity:0;
+    cursor: default;
+    font-size: 9px;
+    transition-delay: 0.8s;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in;
+    position: relative;
+    top:21%;
+    left:24%;
+} 
+.body_3{
+    opacity:0;
+    cursor: default;
+    font-size: 9px;
+    transition-delay: 0.8s;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in;
+    position: relative;
+    top:21%;
+    left:24%;
+}
+
+.head{
+    position: relative;
+    top:43%;
+    left:24%;
+    font-size: 24px;
+    transition-duration: 1s;
+    cursor: default;
+    transition-timing-function: ease-in;
+}
+
+.head_2{
+    position: relative;
+    top:43%;
+    left:18%;
+    font-size: 22px;
+    transition-duration: 1s;
+    cursor: default;
+    transition-timing-function: ease-in;
+}
+
+.head_3{
+    position: relative;
+    top:43%;
+    left: 26%;
+    font-size: 22px;
+    transition-duration: 1s;
+    cursor: default;
+    transition-timing-function: ease-in;
+}
+
 .dot1 {
     position: absolute;
     top: 0%;
@@ -74,28 +139,7 @@ container4 {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 2s;
-}
-
-.body{
-    opacity:0;
-    cursor: default;
-    font-size: 9px;
-    transition-duration: 2s;
-    transition-timing-function: ease-in;
-    position: relative;
-    top:23%;
-    left:25%;
-}
-
-.head{
-    position: relative;
-    top:43%;
-    left:25%;
-    font-size: 24px;
-    transition-duration: 2s;
-    cursor: default;
-    transition-timing-function: ease-out;
+    transition-duration: 1s;
 }
 
 .dot2 {
@@ -107,7 +151,7 @@ container4 {
     background-color: #8eb7bd;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 2s;
+    transition-duration: 1s;
     overflow: hidden;
 }
 
@@ -120,7 +164,7 @@ container4 {
     background-color: #1f6c75;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
 
 .dot1:hover {
@@ -131,8 +175,25 @@ container4 {
     transform: scale(2.0);
 }
 
+.dot3:hover {
+    transform: scale(1.5);
+}
+
+.dot1:hover .head_2 {
+    top: 17%;
+}
+
+.dot3:hover .head_3 {
+    top: 17%;
+}
+
 .dot2:hover .head{
     top:16%;
+}
+
+.dot1:hover .body_2{
+    opacity: 1;
+    font-size: 9px;
 }
 
 .dot2:hover .body{
@@ -140,24 +201,11 @@ container4 {
     font-size: 9px;
 }
 
-.dot2::after .body{
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-}
-.dot3:hover {
-    transform: scale(1.5);
+.dot3:hover .body_3{
+    opacity: 1;
+    font-size: 9px;
 }
 
-/*.dot4 {
-    position: absolute;
-    top: 70%;
-    right: 115%;
-    height: 170px;
-    width: 170px;
-    background-color: #143561;
-    border-radius: 50%;
-    display: inline-block;
-}*/
 #input #input-group {
     width: 63%;
     margin: 1%;
@@ -228,7 +276,7 @@ container4 {
 
 .styled {
     position: absolute;
-    top: 7%;
+    top: 4%;
     left: 34%;
     background-color: #aed2d8;
     color: #143561;
@@ -246,10 +294,10 @@ container4 {
     position: relative;
     transition: all .5s;
     padding-top: 1%;
+    box-shadow: none;
 }
 
 .styled:after {
-    position: absolute;
     content: "";
     top: 0;
     left: 0;
@@ -278,10 +326,45 @@ p {
     width: 50%;
 }
 
-.error {
-    color: red;
+a{
+    text-decoration: none;
 }
 
-a:hover {
+.styled_div {
+    position: relative;
+    top: 1%;
+    left: 2%;
+    background-color: #aed2d8;
+    color: #143561;
+    cursor: pointer;
+    font-size: 5%;
+    width: 34%;
+    height: 8%;
+    font-size: 18px;
+    font-family: serif;
+    border: 1% solid rgb(185, 182, 182);
+    border-radius: 7px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    transition: all .5s;
+    padding-top: 2.5%;
+    text-decoration: none;
+}
+
+.styled_div:after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #8eb7bd;
+    transition: all .35s;
+}
+
+.styled_div:hover {
+    color: white;
+    background-color: #1f6c75;
     text-decoration: none;
 }
