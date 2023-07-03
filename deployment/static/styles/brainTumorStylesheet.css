@@ -216,9 +216,10 @@ container4 {
     border-right: none;
     outline: none;
     background: transparent;
-    color: rgb(255, 255, 255);
+    color: #1f6c75;
     padding-top: 3%;
     padding-bottom: 3%;
+    box-shadow: none;
 }
 
 .text-center {
@@ -227,9 +228,7 @@ container4 {
     margin-bottom: 5%;
 }
 
-.text-white {
-    color: #143561;
-}
+
 
 .help {
     background-color: #aed2d8;
@@ -245,7 +244,6 @@ container4 {
     font-size: 17px;
     font-family: serif;
     text-decoration: none;
-    border: 1% solid rgb(185, 182, 182);
     border-radius: 7px;
     letter-spacing: 1px;
     text-align: center;
@@ -254,6 +252,7 @@ container4 {
     margin-right: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
+    box-shadow: none;
 }
 
 .help:after {
@@ -370,3 +369,20 @@ a{
     background-color: #1f6c75;
     text-decoration: none;
 }
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #aed2d8;
+    padding: 10px 20px;
+    color: rgb(185, 182, 182);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .5s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: #1f6c75;
+  }
+  
