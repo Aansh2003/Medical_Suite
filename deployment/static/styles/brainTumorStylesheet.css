@@ -73,25 +73,27 @@ container4 {
     transition-duration: 0.75s;
     transition-timing-function: ease-in;
     position: relative;
-    top:21%;
-    left:24%;
+    top:25%;
+    left:14%;
+    width: 70%;
 }
 
 .body_2{
     opacity:0;
     cursor: default;
-    font-size: 9px;
+    font-size: 12px;
     transition-delay: 0.8s;
     transition-duration: 0.75s;
     transition-timing-function: ease-in;
     position: relative;
-    top:21%;
-    left:24%;
+    top:19%;
+    left:15%;
+    width:70%;
 } 
 .body_3{
     opacity:0;
     cursor: default;
-    font-size: 9px;
+    font-size: 12px;
     transition-delay: 0.8s;
     transition-duration: 0.75s;
     transition-timing-function: ease-in;
@@ -188,12 +190,12 @@ container4 {
 }
 
 .dot2:hover .head{
-    top:16%;
+    top:22%;
 }
 
 .dot1:hover .body_2{
     opacity: 1;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .dot2:hover .body{
@@ -203,7 +205,7 @@ container4 {
 
 .dot3:hover .body_3{
     opacity: 1;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 #input #input-group {
