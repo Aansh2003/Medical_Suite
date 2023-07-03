@@ -2,10 +2,10 @@ from flask import Flask,render_template,request,render_template_string,redirect,
 from fileinput import filename
 from werkzeug.utils import secure_filename
 import os
-
+from functionality.model_inference import binary_tumor_classifier
 
 UPLOAD_FOLDER = 'uploads/'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -36,10 +36,17 @@ def render_brain_tumor_detect():
             return redirect(request.url)
         
         file = request.files['scan']
+        val = len(os.listdir(str(os.getcwd())+'/'+UPLOAD_FOLDER))
         if file and allowed_file(file.filename):
             print(file.filename)
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
+            predict,prob = binary_tumor_classifier.classify(str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1))))
+            if predict == 1:
+                pred = 'Tumor present'
+            else:
+                pred = 'Tumor not present'
+            print('Prediction = ',pred,'\nProbability = ',int(prob*100))
 
     return render_template('brain_tumor_detect.html')
 
