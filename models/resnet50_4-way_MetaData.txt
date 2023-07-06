@@ -1,0 +1,27 @@
+Training Hyperparameters - 
+
+classes = ['glioma','meningioma','no tumor','pituitary']
+transforms = resize,normalize
+batch size = 32(Mini)
+learning rate = 1e-3
+L2 coefficient = None
+Optimizer = Adam
+Pre-trained = True
+
+Metrics - 
+
+Train time = 36m48s
+Training accuracy = 95.3081
+Validation accuracy = 92.9062
+precision(g) = 97%
+precision(m) = 84%
+precision(n) = 96%
+precision(p) = 95%
+recall(g) = 83%
+recall(m) = 89%
+recall(n) = 100%
+recall(p) = 98%
+f1(g) = 89%
+f1(m) = 86%
+f1(n) = 98%
+f1(p) = 96%
