@@ -27,7 +27,7 @@ def send_email(receiver,html,filename=None,extension=None):
 
     if filename != None and extension!=None:
         attachment = open(filename, "rb")
-        filepath = filename + extension
+        filepath = 'upload' + extension
         p = MIMEBase('application', 'octet-stream')
         p.set_payload((attachment).read())
         encoders.encode_base64(p)
