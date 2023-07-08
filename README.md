@@ -19,7 +19,7 @@ The account will need 2FA and app password generation. Go to settings and type a
 ![oie_lQsTN7ndL1Aa](https://github.com/Aansh2003/Medical_Suite/assets/96300383/2e8cdea1-2ae9-4612-8e46-f32851cf5f91)
 
 Generate a 16 character long password, for example:
-> email: example@gmail.com
+> email: example@gmail.com\
 > password: abcd abcd abcd abcd
 
 Go to the functionality folder and create a file called login_credentials.txt
