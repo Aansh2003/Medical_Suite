@@ -28,7 +28,7 @@ nano medical_suite/deployment/functionality/login_credentials.txt
 ```
 Type in the email ID on the first line and password on the second line, for example\
 \
-![oie_dYqrmfdtL1FR](https://github.com/Aansh2003/Medical_Suite/assets/96300383/9f7ded89-6f0c-4b73-b10d-7f6b85c70265)
+![oie_dYqrmfdtL1FR](https://github.com/Aansh2003/Medical_Suite/assets/96300383/9f7ded89-6f0c-4b73-b10d-7f6b85c70265)\
 The application can now connect to this email and send emails containing the attached files and the output of the model.
 
 ## Running the server
