@@ -14,7 +14,7 @@ Install all dependencies by running the following code
 pip3 install -r requirements.txt
 ```
 Create a throwaway Gmail account which will be used by the application to send Emails to the users.
-The account will need 2FA and app password generation. Go to settings and type app passwords on the search bar.
+The account will need 2FA and app password generation. Go to settings and type app passwords on the search bar.\
 ![oie_lQsTN7ndL1Aa](https://github.com/Aansh2003/Medical_Suite/assets/96300383/2e8cdea1-2ae9-4612-8e46-f32851cf5f91)
 
 Generate a 16 character long password, for example:
@@ -25,7 +25,7 @@ Go to the functionality folder and create a file called login_credentials.txt
 ```
 nano medical_suite/deployment/functionality/login_credentials.txt
 ```
-Type in the email ID on the first line and password on the second line, for example
+Type in the email ID on the first line and password on the second line, for example\
 ![oie_dYqrmfdtL1FR](https://github.com/Aansh2003/Medical_Suite/assets/96300383/9f7ded89-6f0c-4b73-b10d-7f6b85c70265)
 The application can now connect to this email and send emails containing the attached files and the output of the model.
 
@@ -44,11 +44,11 @@ Type in any one of the links shown on the terminal to open the website, for exam
 
 Type this on the web browser
 http://127.0.0.1:5000/brain_tumor
-The website should look like this:
+The website should look like this:\
 ![oie_lrkpxvodDbGd](https://github.com/Aansh2003/Medical_Suite/assets/96300383/a2ea67ec-a8bd-4ced-8139-4d6410d71da1)
 
 ## Output
-After submitting basic details the following email will be sent.
+After submitting basic details the following email will be sent.\
 ![oie_ZiBgAlS5juOy](https://github.com/Aansh2003/Medical_Suite/assets/96300383/60324775-52b6-40ad-aace-3dd7ff4e199a)
 
 ## Further work
