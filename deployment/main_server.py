@@ -42,7 +42,6 @@ def render_brain_tumor_detect():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
             predict,prob = binary_tumor_classifier.classify(str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1))))
-<<<<<<< HEAD
             if predict == 0:
                 pred = 'Glioma present'
             elif predict == 1:
@@ -51,12 +50,11 @@ def render_brain_tumor_detect():
                 pred = 'No tumor'
             else:
                 pred = 'Pituitary present'
-=======
+
             if predict == 1:
                 pred = 'Tumor present'
             else:
                 pred = 'Tumor not present'
->>>>>>> 627738138e15f0cc1e5f848d2427a06aa792667d
             print('Prediction = ',pred,'\nProbability = ',int(prob*100))
 
     return render_template('brain_tumor_detect.html')
