@@ -11,7 +11,7 @@ def classify(PATH):
     model = models.resnet50(pretrained=True)
     nr_filters = model.fc.in_features
     model.fc = nn.Linear(nr_filters, 4)
-    model.load_state_dict(torch.load('/home/dragon/Medical_Suite/models/resnet50_4-way.pt',map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('/home/dragon/medical_project/Medical_Suite/models/resnet50_4-way.pt',map_location=torch.device('cpu')))
     image = image.unsqueeze(0)
     out = model(image)
     _,pred_t = torch.max(out, dim=1)

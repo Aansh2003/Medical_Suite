@@ -3,6 +3,10 @@ from fileinput import filename
 from werkzeug.utils import secure_filename
 import os
 from functionality.model_inference import binary_tumor_classifier
+import functionality.predictor as predictor
+import functionality.email_generator as generator
+import functionality.email_sender as sender
+import math
 
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
@@ -38,24 +42,16 @@ def render_brain_tumor_detect():
         file = request.files['scan']
         val = len(os.listdir(str(os.getcwd())+'/'+UPLOAD_FOLDER))
         if file and allowed_file(file.filename):
-            print(file.filename)
+            extension = file.filename[str(file.filename).rfind('.'):]
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
-            predict,prob = binary_tumor_classifier.classify(str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1))))
-            if predict == 0:
-                pred = 'Glioma present'
-            elif predict == 1:
-                pred = 'Meningioma present'
-            elif predict == 2:
-                pred = 'No tumor'
-            else:
-                pred = 'Pituitary present'
-
-            if predict == 1:
-                pred = 'Tumor present'
-            else:
-                pred = 'Tumor not present'
-            print('Prediction = ',pred,'\nProbability = ',int(prob*100))
+            filepath = str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
+            prediction,prob = binary_tumor_classifier.classify(filepath)
+            prob = int(prob*100)
+            pred = predictor.predict('brain_tumor',prediction)
+            html = generator.generator((pred,prob),'Brain tumor detector',name)
+            sender.send_email(email,html,filepath,str(extension))
+            print(html)
 
     return render_template('brain_tumor_detect.html')
 

@@ -86,7 +86,7 @@ container4 {
     transition-duration: 0.75s;
     transition-timing-function: ease-in;
     position: relative;
-    top:19%;
+    top:30%;
     left:15%;
     width:70%;
 } 
@@ -98,7 +98,7 @@ container4 {
     transition-duration: 0.75s;
     transition-timing-function: ease-in;
     position: relative;
-    top:21%;
+    top:24%;
     left:24%;
 }
 
@@ -125,7 +125,7 @@ container4 {
 .head_3{
     position: relative;
     top:43%;
-    left: 26%;
+    left: 28%;
     font-size: 22px;
     transition-duration: 1s;
     cursor: default;
@@ -182,11 +182,11 @@ container4 {
 }
 
 .dot1:hover .head_2 {
-    top: 17%;
+    top: 22%;
 }
 
 .dot3:hover .head_3 {
-    top: 17%;
+    top: 22%;
 }
 
 .dot2:hover .head{
