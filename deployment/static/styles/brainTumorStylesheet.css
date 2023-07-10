@@ -134,7 +134,7 @@ container4 {
 
 .dot1 {
     position: absolute;
-    top: 0%;
+    top: 10%;
     right: 170%;
     height: 35%;
     width: 35%;
@@ -146,7 +146,7 @@ container4 {
 
 .dot2 {
     position: absolute;
-    top: 30%;
+    top: 40%;
     right: 120%;
     height: 35%;
     width: 35%;
@@ -385,4 +385,22 @@ input[type=file]::file-selector-button {
   input[type=file]::file-selector-button:hover {
     background: #1f6c75;
   }
-  
+
+
+
+  .ten h1 {
+    font-size:34px; font-weight:500; text-transform:uppercase;
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    transition-duration: 2s;
+  }
+  .ten h1:before {
+      background-color: #1f6c75;
+      border-radius: 0.25rem;
+      content: '';
+      display: block;
+      height: 0.25rem;
+      width: 84px;
+      margin-bottom: 1.25rem;
+  }
