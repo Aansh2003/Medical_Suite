@@ -71,8 +71,8 @@ container4 {
 
   nav{
     position: absolute;
-    left: 70%;
-    width: 30%;
+    left: 65%;
+    width: 35%;
     background-color: rgb(233, 224, 224);
     padding-top: 4.2%;
   }
@@ -119,4 +119,14 @@ container4 {
   
   .dropdown:hover .dropbtn {
     background-color: #8eb7bd;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: black;
   }
