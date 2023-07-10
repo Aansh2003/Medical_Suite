@@ -26,7 +26,7 @@ def page_not_found(e):
 
 @app.route('/')
 def render_home_page():
-    return render_template('home_page.html')
+    return render_template('home.html')
 
 @app.route('/brain_tumor',methods=['POST','GET'])
 def render_brain_tumor_detect():
