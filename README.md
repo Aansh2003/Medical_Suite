@@ -81,4 +81,5 @@ Improving the email distribution system
 
 ## References
 [ResNet](https://arxiv.org/abs/1512.03385)\
-[UNet](https://arxiv.org/abs/1505.04597)
+[UNet](https://arxiv.org/abs/1505.04597)\
+[DenseNet](https://arxiv.org/abs/1608.06993)
