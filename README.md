@@ -1,7 +1,7 @@
 # Medical Suite
  
 ## Project Description
-This is a ML/DL project to create a medical metastack which is able to detect various diseases based on scans and other data. Currently brain tumor detection is fully functional with a 93% test accuracy and 96% train accuracy.
+This is a ML/DL project to create a medical metastack which is able to detect various diseases based on scans and other data. Currently brain tumor detection is fully functional with a 93% test accuracy and 96% train accuracy. A UNet based segmentation model has also been implemented, which shows the location where tumor is present.
 
 ## Setting up
 clone the repositor onto your local system
@@ -54,6 +54,10 @@ The website should look like this:\
 After submitting basic details the following email will be sent.\
 \
 ![oie_ZiBgAlS5juOy](https://github.com/Aansh2003/Medical_Suite/assets/96300383/60324775-52b6-40ad-aace-3dd7ff4e199a)
+\
+If a tumor is detected, the image will be passed through a segmentation model and the following output will be generated.\
+![oie_UDo75R8A6goB](https://github.com/Aansh2003/Medical_Suite/assets/96300383/f8629ede-f5bb-4fa7-b3dd-1b429184d975)
+A similar attachment will be sent in the email with the image containing the segmentation mask.
 
 ## Further work
 Creating a fully functional website with a proper home page.
@@ -62,3 +66,4 @@ Improving the email distribution system
 
 ## References
 [ResNet](https://arxiv.org/abs/1512.03385)
+[UNet](https://arxiv.org/abs/1505.04597)
