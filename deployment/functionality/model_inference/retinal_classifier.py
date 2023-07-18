@@ -23,7 +23,6 @@ def classify(PATH):
     out = model(image)
     _,pred_t = torch.max(out, dim=1)
     prob = out.tolist()[0][int(pred_t)]
-    print(pred_t,prob)
     return (int(pred_t),(prob))
 
 if __name__ == "__main__":

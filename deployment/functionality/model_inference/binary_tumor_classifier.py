@@ -16,7 +16,6 @@ def classify(PATH):
     out = model(image)
     _,pred_t = torch.max(out, dim=1)
     prob = max((torch.softmax(out,dim=1)).tolist()[0])
-    print(pred_t,prob)
     return (int(pred_t),float(prob))
     
 
