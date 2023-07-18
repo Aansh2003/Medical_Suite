@@ -7,9 +7,9 @@ This is a ML/DL project to create a medical metastack which is able to detect va
 Brain Tumor classification - Test accuracy: 93%\
 Brain Tumor segmentation - Test Loss: 0.32%
 \
-\
 
-Retinal classification - Test accuracy: 91%\
+
+Retinal classification - Test accuracy: 91%
 
 ## Setting up
 clone the repositor onto your local system
