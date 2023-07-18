@@ -3,10 +3,11 @@ from fileinput import filename
 from werkzeug.utils import secure_filename
 import os
 from functionality.model_inference import binary_tumor_classifier
+from functionality.model_inference import tumor_segmentation
+from functionality.model_inference import retinal_classifier
 import functionality.predictor as predictor
 import functionality.email_generator as generator
 import functionality.email_sender as sender
-from functionality.model_inference import tumor_segmentation
 import math
 
 UPLOAD_FOLDER = 'uploads/'
@@ -59,9 +60,35 @@ def render_brain_tumor_detect():
 
             html = generator.generator((pred,prob),'Brain tumor detector',name)
             sender.send_email(email,html,filepath,str(extension),segment)
-            print(html)
 
     return render_template('brain_tumor_detect.html')
+
+@app.route('/retinal_scan',methods=['POST','GET'])
+def render_retinal_page():
+    if(request.method=='POST'):
+
+        name = request.form['fname']
+        email = request.form['email']
+
+        if 'scan' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        
+        file = request.files['scan']
+        val = len(os.listdir(str(os.getcwd())+'/'+UPLOAD_FOLDER))
+        if file and allowed_file(file.filename):
+            extension = file.filename[str(file.filename).rfind('.'):]
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
+            filepath = str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
+            prediction,prob = retinal_classifier.classify(filepath)
+            prob = int(prob*100)
+            pred = predictor.predict('retinal',prediction)
+
+            html = generator.generator((pred,prob),'Retinal disease detector',name)
+            sender.send_email(email,html,filepath,str(extension))
+            
+    return render_template('retinal_page.html')
 
 if __name__=="__main__":
     app.register_error_handler(404, page_not_found)

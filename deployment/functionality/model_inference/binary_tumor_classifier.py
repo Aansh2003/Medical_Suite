@@ -21,5 +21,5 @@ def classify(PATH):
     
 
 if __name__=="__main__":
-    classify('/home/dragon/Medical_Suite/deployment/uploads/file1')
+    classify('/home/dragon/medical_project/Medical_Suite/deployment/uploads/file1')
     
