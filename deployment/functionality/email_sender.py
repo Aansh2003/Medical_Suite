@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-def send_email(receiver,html,filename=None,extension=None):
+def send_email(receiver,html,filename=None,extension=None,segment=False):
     creds = open('functionality/login_credentials.txt','r')
     credentials = creds.read().split()
 
@@ -26,7 +26,7 @@ def send_email(receiver,html,filename=None,extension=None):
     msg.attach(part)
 
     if filename != None and extension!=None:
-        attachment = open(filename, "rb")
+        attachment = open(filename+extension if segment else filename, "rb")
         filepath = 'upload' + extension
         p = MIMEBase('application', 'octet-stream')
         p.set_payload((attachment).read())

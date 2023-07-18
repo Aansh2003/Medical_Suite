@@ -6,6 +6,7 @@ from functionality.model_inference import binary_tumor_classifier
 import functionality.predictor as predictor
 import functionality.email_generator as generator
 import functionality.email_sender as sender
+from functionality.model_inference import tumor_segmentation
 import math
 
 UPLOAD_FOLDER = 'uploads/'
@@ -49,8 +50,15 @@ def render_brain_tumor_detect():
             prediction,prob = binary_tumor_classifier.classify(filepath)
             prob = int(prob*100)
             pred = predictor.predict('brain_tumor',prediction)
+            segment = False
+
+            if pred != 'No Tumor':
+                segment = True
+                segmented_path = tumor_segmentation.segment(filepath,extension)
+                filepath = segmented_path
+
             html = generator.generator((pred,prob),'Brain tumor detector',name)
-            sender.send_email(email,html,filepath,str(extension))
+            sender.send_email(email,html,filepath,str(extension),segment)
             print(html)
 
     return render_template('brain_tumor_detect.html')
