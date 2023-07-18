@@ -57,6 +57,7 @@ After submitting basic details the following email will be sent.\
 \
 If a tumor is detected, the image will be passed through a segmentation model and the following output will be generated.\
 ![oie_UDo75R8A6goB](https://github.com/Aansh2003/Medical_Suite/assets/96300383/f8629ede-f5bb-4fa7-b3dd-1b429184d975)
+\
 A similar attachment will be sent in the email with the image containing the segmentation mask.
 
 ## Further work
@@ -65,5 +66,5 @@ Creating more models to detect other diseases.
 Improving the email distribution system
 
 ## References
-[ResNet](https://arxiv.org/abs/1512.03385)
+[ResNet](https://arxiv.org/abs/1512.03385)\
 [UNet](https://arxiv.org/abs/1505.04597)
