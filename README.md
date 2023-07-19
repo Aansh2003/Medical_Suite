@@ -82,3 +82,6 @@ Improving the email distribution system
 [ResNet](https://arxiv.org/abs/1512.03385)\
 [UNet](https://arxiv.org/abs/1505.04597)\
 [DenseNet](https://arxiv.org/abs/1608.06993)
+
+## Credits
+[Aditi Bhoomireddy](https://github.com/no-oneeee) - webpage design for input page
