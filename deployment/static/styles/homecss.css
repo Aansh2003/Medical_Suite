@@ -51,6 +51,59 @@ container4 {
     opacity: 0.7;
 }
 
+container5{
+  padding: 20px;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left:17%;
+  background-color: #a5c1c5;
+  border-radius: 20px;
+}
+
+container6{
+  padding: 20px;
+  width: 40%;
+  position: absolute;
+  top: 42%;
+  left:17%;
+  background-color: #a5c1c5;
+  border-radius: 20px;
+}
+
+container7{
+  padding: 20px;
+  width: 40%;
+  position: absolute;
+  top: 56.5%;
+  left:17%;
+  background-color: #a5c1c5;
+  border-radius: 20px;
+}
+
+container8{
+  padding: 20px;
+  width: 40%;
+  position: absolute;
+  top: 71%;
+  left:17%;
+  background-color: #a5c1c5;
+  border-radius: 20px;
+}
+
+.tumor{
+  position: absolute;
+  left: 65%;
+  top: 27%;
+  opacity: 0.8;;
+  border-radius: 250px;
+}
+
+.subtitle{
+  position: relative;
+  font-size: x-large;
+}
+
   .title h1 {
     font-size:56px; font-weight:500; text-transform:uppercase;
     position: absolute;
