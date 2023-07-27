@@ -2,67 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScanUpload</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="{{ url_for('static',filename='styles/homecss.css') }}" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanUpload</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="{{ url_for('static',filename='styles/homecss.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="title">
-        <h1>Medical Suite</h1>
+  <div class="title">
+    <h1>Medical Suite</h1>
+  </div>
+  <container2>
+  </container2>
+  <container3>
+  </container3>
+  <container4>
+  </container4>
+
+  <div class="meta-container clearfix">
+    <div class="container" id="one">
+      <div class="subtitle"><span style="float: left;">AI driven disease detection</span><span class="arrow" style="float: right;"></span><div style="clear: both;"></div></div>
+      <div class="info">We use state of the art machine learning based models to deliver high accuracy results. Each
+        model is trained with more than 3000 data points and further tested on 700+ data points to avoid overfitting and
+        underfitting.</div>
+        <div style="clear: both;"></div>
     </div>
-    <container2>
-    </container2>
-    <container3>
-    </container3>
-    <container4>
-    </container4>
+    <div class="container" id="two">
+      <div class="subtitle"><span style="float: left;">Additional features</span><span class="arrow" style="float: right;"></span><div style="clear: both;"></div></div>
+      <div class="info">Various additional features like pin-point tumor detection and eye fundus blood vessel
+        extraction have been implemented using segmentation models. Further work on more features is actively carried
+        out.</div>
+        <div style="clear: both;"></div>
+      </div>
+    <div class="container" id="three">
+      <div class="subtitle"><span style="float: left;">Detailed Analytics</span><span class="arrow" style="float: right;"></span><div style="clear: both;"></div></div>
+      <div class="info">Each model has been tested vigorously with various metrics. Constant monitoring of newly
+        observed data is also being carried out to ensure best results.</div>
+        <div style="clear: both;"></div>
+      </div>
+    <div class="container" id="four">
+      <div class="subtitle"><span style="float: left;">Expansive development</span><span class="arrow" style="float: right;"></span><div style="clear: both;"></div></div>
+      <div class="info">New models are constantly being developed for other diseases. When a model achieves high
+        accuracy in various metrics it is added onto the website.</div>
+        <div style="clear: both;"></div>
+      </div>
+  </div>
 
-    <container5>
-      <div class="subtitle">AI driven disease detection</div>
-      <div class="info">We use state of the art machine learning based models to deliver high accuracy results. Each model is trained with more than 3000 data points and further tested on 700+ data points to avoid overfitting and underfitting.</div>
-    </container5>
 
-    <container6>
-      <div class="subtitle">Additional features</div>
-      <div class="info">Various additional features like pin-point tumor detection and eye fundus blood vessel extraction have been implemented using segmentation models. Further work on more features is actively carried out.</div>
-    </container6>
+  <!-- <container5>
+    <div class="subtitle">AI driven disease detection</div>
+    <div class="info">We use state of the art machine learning based models to deliver high accuracy results. Each model
+      is trained with more than 3000 data points and further tested on 700+ data points to avoid overfitting and
+      underfitting.</div>
+  </container5>
 
-    <container7>
-      <div class="subtitle">Detailed Analytics</div>
-      <div class="info">Each model has been tested vigorously with various metrics. Constant monitoring of newly observed data is also being carried out to ensure best results.</div>
-    </container7>
-  
-    <container8>
-      <div class="subtitle">Expansive development</div>
-      <div class="info">New models are constantly being developed for other diseases. When a model achieves high accuracy in various metrics it is added onto the website.</div>
-    </container8>
+  <container6>
+    <div class="subtitle">Additional features</div>
+    <div class="info">Various additional features like pin-point tumor detection and eye fundus blood vessel extraction
+      have been implemented using segmentation models. Further work on more features is actively carried out.</div>
+  </container6>
 
+  <container7>
+    <div class="subtitle">Detailed Analytics</div>
+    <div class="info">Each model has been tested vigorously with various metrics. Constant monitoring of newly observed
+      data is also being carried out to ensure best results.</div>
+  </container7>
+
+  <container8>
+    <div class="subtitle">Expansive development</div>
+    <div class="info">New models are constantly being developed for other diseases. When a model achieves high accuracy
+      in various metrics it is added onto the website.</div>
+  </container8> -->
+
+  <div class="content_img">
     <img class="tumor" src="{{ url_for('static',filename='brain_tumor.png') }}">
-    
-    <nav>
+    <div class="description">An MRI Scan with green colored area depicting presence of tumor</div>
+  </div>
+
+
+  <nav>
     <div class="dropdown">
-        <button class="dropbtn">Our solutions</button>
-        <div class="dropdown-content">
-          <a href="/brain_tumor">Brain Tumor</a>
-          <a href="/retinal_scan">Retinal Test</a>
-        </div>
+      <button class="dropbtn">Our solutions</button>
+      <div class="dropdown-content">
+        <a href="/brain_tumor">Brain Tumor</a>
+        <a href="/retinal_scan">Retinal Test</a>
       </div>
-      <div class="dropdown">
-        <button class="dropbtn">Information</button>
-        <div class="dropdown-content">
-          <a href="#">Model Details</a>
-          <a href="#">References</a>
-          <a href="#">About us</a>
-        </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Information</button>
+      <div class="dropdown-content">
+        <a href="#">Model Details</a>
+        <a href="#">References</a>
+        <a href="#">About us</a>
       </div>
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#">Analytics</a></button>
-      </div>
-    </nav>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><a href="#">Analytics</a></button>
+    </div>
+  </nav>
 </body>
 
 </html>
