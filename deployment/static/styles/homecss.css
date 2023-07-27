@@ -97,6 +97,11 @@ container8{
   top: 27%;
   opacity: 0.8;;
   border-radius: 250px;
+  transition-duration: 2s;
+}
+
+.tumor:hover{
+  border-radius: 100px;
 }
 
 .subtitle{
