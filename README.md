@@ -72,6 +72,9 @@ A similar attachment will be sent in the email with the image containing the seg
 
 ### Retinal diseases detection
 This classifies between 4 classes ie- cataract, diabetic retinopathy and glaucoma and also normal retinal images.
+A feature to detect blood vessels in the eye fundus has also been implemented.\
+![Screenshot from 2023-07-27 16-10-14](https://github.com/Aansh2003/Medical_Suite/assets/96300383/cf361620-66eb-4abf-a158-484e9051a7a2)
+
 
 ## Further work
 Creating a fully functional website with a proper home page.
