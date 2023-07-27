@@ -52,10 +52,11 @@ Type in any one of the links shown on the terminal to open the website, for exam
 > Running on http://127.0.0.1:5000
 
 Type this on the web browser
-http://127.0.0.1:5000/brain_tumor
+http://127.0.0.1:5000/
 The website should look like this:\
 \
-![oie_lrkpxvodDbGd](https://github.com/Aansh2003/Medical_Suite/assets/96300383/a2ea67ec-a8bd-4ced-8139-4d6410d71da1)
+![Screenshot from 2023-07-27 16-56-30](https://github.com/Aansh2003/Medical_Suite/assets/96300383/5c7ac67a-ae85-4024-98f3-4d185fc945ab)
+
 
 ## Output
 After submitting basic details the following email will be sent.\
