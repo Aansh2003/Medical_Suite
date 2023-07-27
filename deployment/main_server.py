@@ -5,6 +5,7 @@ import os
 from functionality.model_inference import binary_tumor_classifier
 from functionality.model_inference import tumor_segmentation
 from functionality.model_inference import retinal_classifier
+from functionality.model_inference import vessel_extractor
 import functionality.predictor as predictor
 import functionality.email_generator as generator
 import functionality.email_sender as sender
@@ -69,7 +70,9 @@ def render_retinal_page():
 
         name = request.form['fname']
         email = request.form['email']
+        vessel = request.form['vessel']
 
+        print(vessel)
         if 'scan' not in request.files:
             flash('No file part')
             return redirect(request.url)
@@ -82,11 +85,17 @@ def render_retinal_page():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
             filepath = str(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER'], 'file'+str(val+1)))
             prediction,prob = retinal_classifier.classify(filepath)
+
             prob = int(prob*100)
             pred = predictor.predict('retinal',prediction)
 
+            if(vessel == "on"):
+                vessel_path = vessel_extractor.extract(filepath,extension)
+                segment = True
+                filepath = vessel_path
+
             html = generator.generator((pred,prob),'Retinal disease detector',name)
-            sender.send_email(email,html,filepath,str(extension))
+            sender.send_email(email,html,filepath,str(extension),segment)
             
     return render_template('retinal_page.html')
 
