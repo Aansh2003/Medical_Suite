@@ -99,6 +99,10 @@ def render_retinal_page():
             
     return render_template('retinal_page.html')
 
+@app.route('/model_details')
+def render_model():
+    return render_template('model_details.html')
+
 if __name__=="__main__":
     app.register_error_handler(404, page_not_found)
     app.run(host="0.0.0.0",port=5000)

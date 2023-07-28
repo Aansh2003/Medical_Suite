@@ -107,7 +107,7 @@ container4 {
     top:43%;
     left:24%;
     font-size: 24px;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     cursor: default;
     transition-timing-function: ease-in;
 }
@@ -117,7 +117,7 @@ container4 {
     top:43%;
     left:18%;
     font-size: 22px;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     cursor: default;
     transition-timing-function: ease-in;
 }
@@ -127,7 +127,7 @@ container4 {
     top:43%;
     left: 28%;
     font-size: 22px;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     cursor: default;
     transition-timing-function: ease-in;
 }
@@ -141,7 +141,7 @@ container4 {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
 }
 
 .dot2 {
@@ -153,8 +153,7 @@ container4 {
     background-color: #8eb7bd;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 1s;
-    overflow: hidden;
+    transition-duration: 0.7s;
 }
 
 .dot3 {
@@ -166,7 +165,7 @@ container4 {
     background-color: #1f6c75;
     border-radius: 50%;
     display: inline-block;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
 }
 
 .dot1:hover {
@@ -196,22 +195,22 @@ container4 {
 .dot1:hover .body_2{
     opacity: 1;
     font-size: 12px;
-    transition-duration: 0.75s;
-    transition-delay: 0.8s;
+    transition-duration: 0.5s;
+    transition-delay: 0.6s;
 }
 
 .dot2:hover .body{
     opacity: 1;
     font-size: 9px;
-    transition-duration: 0.75s;
-    transition-delay: 0.8s;
+    transition-duration: 0.5s;
+    transition-delay: 0.6s;
 }
 
 .dot3:hover .body_3{
     opacity: 1;
     font-size: 12px;
-    transition-duration: 0.75s;
-    transition-delay: 0.8s;
+    transition-duration: 0.5s;
+    transition-delay: 0.6s;
 }
 
 #input #input-group {
