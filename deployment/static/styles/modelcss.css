@@ -72,15 +72,15 @@ container4 {
   .meta-container{
     position: absolute;
     top:30%;
-    left:20%;
-    width: 70%;
+    left:25%;
+    width: 60%;
     display: inline-block;
   }
 
   .container{
     background-color: #a5c1c5;
     padding: 10px 20px 20px 20px;
-    width: 30%;
+    width: 90%;
     margin: 10px;
     float: left;
     height: 100px;
@@ -89,22 +89,31 @@ container4 {
   }
 
   .subtitle{
+    position: relative;
     font-size: xx-large;
-    text-align: center;
+    left:45%;
     padding: 10px 0px 10px 0px;
+    transition-duration: 1s;
   }
 
   .info{
+    position: relative;
     font-size: large;
     text-align: center;
+    top: 70%;
+    left: 7%;
+    width:40%;
+    float: left;
   }
 
   .image{
     height: 140px;
     width: 200px;
     position: relative;
-    left: 25%;
-    margin: 30px 0px 20px 0px;
+    margin: 0px 20px 20px 20px;
+    right: 10%;
+    bottom: 70%;
+    float: right;
   }
 
   .hidden{
@@ -113,12 +122,17 @@ container4 {
   }
 
 .container:hover{
-    height: 450px;
+    height: 250px;
 }
   .container:hover .hidden{
     transition: visibility 0s,opacity 1s 0.8s;
     visibility: visible;
     opacity: 1;
+  }
+
+  .container:hover .subtitle{
+    left: 22%;
+    transition-duration: 1s;
   }
 
   nav{
