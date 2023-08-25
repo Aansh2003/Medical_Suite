@@ -70,9 +70,13 @@ def render_retinal_page():
 
         name = request.form['fname']
         email = request.form['email']
-        vessel = request.form['vessel']
+        seg = "off"
+        try:
+            vessel = request.form['vessel']
+            seg = "on"
+        except:
+            pass
 
-        print(vessel)
         if 'scan' not in request.files:
             flash('No file part')
             return redirect(request.url)
@@ -89,7 +93,8 @@ def render_retinal_page():
             prob = int(prob*100)
             pred = predictor.predict('retinal',prediction)
 
-            if(vessel == "on"):
+            segment = False
+            if(seg == "on"):
                 vessel_path = vessel_extractor.extract(filepath,extension)
                 segment = True
                 filepath = vessel_path
