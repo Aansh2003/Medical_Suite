@@ -9,38 +9,43 @@
   <link href="{{ url_for('static',filename='styles/modelcss.css') }}" rel="stylesheet">
 
 </head>
+
 <body>
-    <div class="title">
-      <h1>Model details</h1>
+  <div class="title">
+    <h1>Model details</h1>
+  </div>
+  <container2>
+  </container2>
+  <container3>
+  </container3>
+  <container4>
+  </container4>
+  <div class="meta-container">
+    <div class="container" id="one">
+      <div class="subtitle"><a href="https://arxiv.org/abs/1512.03385">ResNet</a></div>
+      <div class="hidden">
+        <div class="info">Residual Networks work on the principal of skip connections as input values are fast-forwarded
+          to subsequent layers. This increases the models generalizing capabilities which other model structures
+          struggle with as they get deeper.</div>
+        <img class="image" src="{{ url_for('static',filename='ResNet.png') }}">
+      </div>
     </div>
-    <container2>
-    </container2>
-    <container3>
-    </container3>
-    <container4>
-    </container4>
-    <div class="meta-container">
-        <div class="container" id="one">
-            <div class="subtitle"><a href="https://arxiv.org/abs/1512.03385">ResNet</a></div>
-            <div class="hidden">
-                <div class="info">Residual Networks work on the principal of skip connections as input values are fast-forwarded to subsequent layers. This increases the models generalizing capabilities which other model structures struggle with as they get deeper.</div>
-                <img class="image" src="{{ url_for('static',filename='ResNet.png') }}">
-            </div>
-                    </div>
-        <div class="container" id="two">
-            <div class="subtitle">DenseNet</div>
-            <div class="info"></div>
-        </div>
-        <div class="container" id="three">
-            <div class="subtitle">UNet</div>
-            <div class="info"></div>
-        </div>
-        <div style="clear: both;"></div>
+    <div style="clear: both;"></div>
+    <div class="container" id="two">
+      <div class="subtitle">DenseNet</div>
+      <div class="info"></div>
     </div>
-    <nav>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn"><a href="/">Back</a></button>
-        </div>
-      </nav>
+    <div style="clear: both;"></div>
+    <div class="container" id="three">
+      <div class="subtitle">UNet</div>
+      <div class="info"></div>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <nav>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><a href="/">Back</a></button>
+    </div>
+  </nav>
 </body>
