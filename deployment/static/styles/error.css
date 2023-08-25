@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(233, 224, 224);
+    background-size: 120%;
+}
+
+container2 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #143561;
+    border-radius: 0%;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+container3 {
+    position: absolute;
+    top: 0%;
+    left: 3.5%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #1f6c75;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+container4 {
+    position: absolute;
+    top: 0%;
+    left: 7%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #8eb7bd;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+.message{
+    position: absolute;
+    top: 40%;
+    left:40%;
+    text-align: center;
+}
+
+.error_header{
+    font-size: xx-large;
+}
+
+.error_message{
+    font-size: large;
+}
+
+.unstyled{
+    text-decoration: none;
+    color: black;
+}
+
+.unstyled:hover{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    margin-top: 20px;
+    background-color: #8eb7bd;
+    width: 20%;
+    height: 30%;
+}
+
+button:hover{
+    background-color: #1f6c75;
+}

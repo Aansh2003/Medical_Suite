@@ -10,6 +10,7 @@ import functionality.predictor as predictor
 import functionality.email_generator as generator
 import functionality.email_sender as sender
 import math
+from werkzeug.exceptions import HTTPException
 
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
@@ -22,10 +23,10 @@ def allowed_file(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.errorhandler(HTTPException)
+def handle_exception(e):
+    return render_template('error.html',code = e.code),e.code
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('page_not_found.html'),404
 
 @app.route('/')
 def render_home_page():
@@ -109,5 +110,5 @@ def render_model():
     return render_template('model_details.html')
 
 if __name__=="__main__":
-    app.register_error_handler(404, page_not_found)
+    app.register_error_handler(HTTPException, handle_exception)
     app.run(host="0.0.0.0",port=5000)
