@@ -14,7 +14,7 @@ Brain Tumor segmentation - Test Loss: 0.32
 Retinal classification - Test accuracy: 91%
 
 ## Setting up
-clone the repositor onto your local system
+clone the repository onto your local system
 ```
 git clone https://github.com/Aansh2003/Medical_Suite.git
 ```
