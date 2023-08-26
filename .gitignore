@@ -3,3 +3,4 @@ models/
 deployment/functionality/login_credentials.txt
 deployment/segmented_images
 data/
+data.tar.xz
