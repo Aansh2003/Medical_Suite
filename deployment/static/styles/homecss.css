@@ -54,24 +54,30 @@ container4 {
   top: 31%;
   left:17%;
   width:42%;
+  height: 60%;
   float: left;
 }
 
 .container{
-  padding: 20px;
+  padding: 0.5vw;
   background-color: #a5c1c5;
   margin:10px;
   border-radius: 20px;
-  
+  height: 17%;
+  transition-duration: 1s;
+}
+
+.container:hover{
+  height: 30%;
 }
 
 .subtitle{
   position: relative;
-  font-size: xx-large;
+  font-size: 4.5vh;
 }
 
 .info{
-  font-size: large;
+  font-size: 1vw;
   visibility: hidden;
   opacity: 0;
   max-height: 0;
@@ -135,31 +141,32 @@ container8{
 
 .content_img{
   position: absolute;
+  width: 30vw;
   left: 65%;
-  top: 27%;
+  top: 27vh;
 }
 .tumor{
-
-  opacity: 0.8;;
-  border-radius: 250px;
+  width: 100%;
+  opacity: 0.8;
+  border-radius: 20vw;
   transition-duration: 2s;
 }
 
 .tumor:hover{
-  border-radius: 100px;
+  border-radius: 8vw;
 }
 
 .content_img div{
   position: absolute;
   bottom: 0;
-  right: 25%;
-  width: 250px;
+  right: calc(10vh * 10vh);
+  width: 40vh;
   background: transparent;
   color: rgb(117, 194, 117);
   margin-bottom: 5px;
   padding:10px;
   font-family: sans-serif;
-  font-size: 11px;
+  font-size: 2vh;
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s,visibility 1s;
@@ -170,8 +177,6 @@ container8{
   visibility: visible;
   opacity: 1; 
 }
-
-
 
 
   .title h1 {
