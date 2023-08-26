@@ -3,6 +3,9 @@
 ## Project Description
 This is a ML/DL project to create a medical metastack which is able to detect various diseases based on scans and other data. Currently brain tumor detection and segmentation as well as retinal disease detection is fully operational and deployed.
 
+## Data
+The data containing the scans and images can be found [here](https://learnermanipal-my.sharepoint.com/:f:/g/personal/aansh_basu_learner_manipal_edu/ErL-RyCfpwhIiNbEX3MWweEBH_PLeMADin7jDo14BA_Ibw?e=N70qDk).\
+
 ## Analytics
 Brain Tumor classification - Test accuracy: 93%\
 Brain Tumor segmentation - Test Loss: 0.32
