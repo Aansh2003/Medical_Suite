@@ -84,7 +84,7 @@ container4 {
     margin: 10px;
     float: left;
     height: 100px;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     border-radius: 20px;
   }
 
@@ -125,7 +125,7 @@ container4 {
     height: 250px;
 }
   .container:hover .hidden{
-    transition: visibility 0s,opacity 1s 0.8s;
+    transition: visibility 0s,opacity 0.5s 0.4s;
     visibility: visible;
     opacity: 1;
   }
