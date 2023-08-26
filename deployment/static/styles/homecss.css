@@ -39,8 +39,8 @@ container4 {
 
 .arrow {
   box-sizing: border-box;
-  height: 10px;
-  width: 10px;
+  height: 1vh;
+  width: 0.5vw;
   border-style: solid;
   border-color: black;
   border-width: 0px 1px 1px 0px;
@@ -160,14 +160,14 @@ container8{
 .content_img div{
   position: absolute;
   bottom: 0;
-  right: calc(10vh * 10vh);
+  right: 9vh;
   width: 40vh;
   background: transparent;
   color: rgb(117, 194, 117);
   margin-bottom: 5px;
   padding:10px;
   font-family: sans-serif;
-  font-size: 2vh;
+  font-size: 1.8vh;
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s,visibility 1s;
