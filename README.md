@@ -19,6 +19,12 @@ clone the repository onto your local system
 git clone https://github.com/Aansh2003/Medical_Suite.git
 ```
 
+Install NPM and JQuery
+```
+sudo apt install nodejs npm
+npm install jquery
+```
+
 Install all dependencies by running the following code
 ```
 pip3 install -r requirements.txt
