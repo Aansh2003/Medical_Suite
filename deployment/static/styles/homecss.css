@@ -2,7 +2,7 @@
 {
   body {
     background-color: rgb(233, 224, 224);
-    background-size: 120%;
+    background-size: 100%;
     max-width: 100%;
 }
 
@@ -319,7 +319,7 @@ container8{
     .meta-container{
       position: absolute;
       top: 25%;
-      left:8%;
+      left:7vw;
       width:42%;
       height: 60%;
       float: left;
