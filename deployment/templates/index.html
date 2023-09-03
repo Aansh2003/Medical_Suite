@@ -35,30 +35,37 @@
             <form class="login-box" method="POST">
                 
                 <input type="email"
-                       class="email ele"
-                       placeholder="youremail@email.com">
+                       class = "ele"
+                       placeholder="youremail@email.com"
+                       name="email">
                 
                 <input type="password"
                        class="password ele"
-                       placeholder="password">
-                <button class="styled">Login</button>
-                <input class="styled" type="button" onclick="location.href='/home';" value="Guest" />
+                       placeholder="password"
+                       name="pass">
+                <input class="styled" type="submit" name="login" value="Login">
+                <input class="styled" type="submit" name="guest" value="Guest" />
+                <div class="error">{{info}}</div>
             </form>
 
             <form class="signup-box" method="POST">
                 <input type="text"
                        class="name ele"
-                       placeholder="Enter your name">
+                       placeholder="Enter your name"
+                       name="name_reg">
                 <input type="email"
                        class="email ele"
-                       placeholder="youremail@email.com">
+                       placeholder="youremail@email.com"
+                       name="email_reg">
                 <input type="password"
                        class="password ele"
-                       placeholder="password">
+                       placeholder="password"
+                       name="pass_reg">
                 <input type="password"
                        class="password ele"
-                       placeholder="Confirm password">
-                <button class="styled">Signup</button>
+                       placeholder="Confirm password"
+                       name="conf_pass_reg">
+                       <input class="styled" type="submit" name="signup" value="signup">
             </form>
         </div>
     </div>

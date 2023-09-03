@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,render_template_string,redirect,flash
+from flask import Flask,render_template,request,render_template_string,redirect,flash, session
 from fileinput import filename
 from werkzeug.utils import secure_filename
 import os
@@ -11,6 +11,12 @@ import functionality.email_generator as generator
 import functionality.email_sender as sender
 import math
 from werkzeug.exceptions import HTTPException
+from functionality.cloud_api import login
+
+# Global variable declarations
+default = ('admin@admin.com','admin')
+
+id = 0
 
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
@@ -18,6 +24,9 @@ ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "super secret key"
+
+
+# App route definitions
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -28,15 +37,49 @@ def handle_exception(e):
     return render_template('error.html',code = e.code),e.code
 
 @app.route('/',methods=['POST','GET'])
-def login():
+def login_signup():
+    global id
     if(request.method=='POST'):
-        pass
-    
+        if(request.form.get('guest')):
+            session['loggedin'] = False
+            session['id'] = id
+            id = id+1
+            session['username'] = 'guest'
+            return redirect('/home')
+        
+        if(request.form.get('login')):
+            email = request.form['email']
+            password = request.form['pass']
+            if(email == default[0] and password == default[1]):
+                session['loggedin'] = True
+                session['id'] = id
+                id = id+1
+                session['username'] = email
+                return redirect('/home')
+            
+            if(login.check_pass(email,password)):
+                session['loggedin'] = True
+                session['id'] = id
+                id = id+1
+                session['username'] = email
+                return redirect('/home')
+            else:
+                return render_template('index.html',info='Incorrect username or password')
+
+        elif(request.form.get('signup')):
+                if request.form['pass_reg'] == request.form['conf_pass_reg']:
+                    name = request.form['name_reg']
+                    email = request.form['email_reg']
+                    password = request.form['pass_reg']
+                    login.signup(name,email,password)
+                else:
+                    return render_template('index.html',info='Passwords do not match')
     return render_template('index.html')
 
 @app.route('/home')
 def render_home_page():
     return render_template('home.html')
+
 
 @app.route('/brain_tumor',methods=['POST','GET'])
 def render_brain_tumor_detect():
