@@ -109,7 +109,7 @@
         position: relative;
         top:43%;
         left:4.5vw;
-        font-size: 24px;
+        font-size:1.5vw;
         transition-duration: 0.7s;
         cursor: default;
         transition-timing-function: ease-in;
@@ -119,7 +119,7 @@
         position: relative;
         top:5vw;
         left:1.7vw;
-        font-size: 22px;
+        font-size: 1.15vw;
         transition-duration: 0.7s;
         cursor: default;
         transition-timing-function: ease-in;
@@ -129,7 +129,7 @@
         position: relative;
         top:5vw;
         left:3vw;
-        font-size: 22px;
+        font-size: 1.15vw;
         transition-duration: 0.7s;
         cursor: default;
         transition-timing-function: ease-in;
@@ -145,6 +145,7 @@
         border-radius: 10vw;
         display: inline-block;
         transition-duration: 0.7s;
+        transition: ;
     }
     
     .dot2 {
@@ -405,7 +406,7 @@
         font-size:2.5vw; font-weight:500; text-transform:uppercase;
         position: absolute;
         top: 10%;
-        left: 17%;
+        left: 15%;
         transition-duration: 2s;
       }
       .ten h1:before {

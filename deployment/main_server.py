@@ -27,8 +27,14 @@ def allowed_file(filename):
 def handle_exception(e):
     return render_template('error.html',code = e.code),e.code
 
+@app.route('/',methods=['POST','GET'])
+def login():
+    if(request.method=='POST'):
+        pass
+    
+    return render_template('index.html')
 
-@app.route('/')
+@app.route('/home')
 def render_home_page():
     return render_template('home.html')
 

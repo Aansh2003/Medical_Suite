@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                         initial-scale=1.0">
+    <title>Medical Suite</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+ 
+<body>
+    <header>
+        <h1 class="heading">Welcome!</h1>
+        <h3 class="title">Log in or register to continue</h3>
+    </header>
+
+    <container2>
+    </container2>
+    <container3>
+    </container3>
+    <container4>
+    </container4>
+
+    <div class="container">
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+
+        <div class="form-section">
+
+            <form class="login-box" method="POST">
+                
+                <input type="email"
+                       class="email ele"
+                       placeholder="youremail@email.com">
+                
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                <button class="styled">Login</button>
+                <input class="styled" type="button" onclick="location.href='/home';" value="Guest" />
+            </form>
+
+            <form class="signup-box" method="POST">
+                <input type="text"
+                       class="name ele"
+                       placeholder="Enter your name">
+                <input type="email"
+                       class="email ele"
+                       placeholder="youremail@email.com">
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                <input type="password"
+                       class="password ele"
+                       placeholder="Confirm password">
+                <button class="styled">Signup</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static',filename='scripts/index.js') }}"></script>
+</body>
+</html>
