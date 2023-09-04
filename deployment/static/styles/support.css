@@ -1,0 +1,129 @@
+.title h1 {
+    font-size:4.5vw; font-weight:500; text-transform:uppercase;
+    position: absolute;
+    top: 0%;
+    left: 17%;
+  }
+
+  .title h1:before {
+      background-color: #1f6c75;
+      border-radius: 0.25rem;
+      content: '';
+      display: block;
+      height: 0.25rem;
+      width: 120px;
+      margin-bottom: 1.25rem;
+  }
+
+  body {
+    background-color: rgb(233, 224, 224);
+    background-size: 100%;
+    max-width: 100%;
+}
+
+container2 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #143561;
+    border-radius: 0%;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+container3 {
+    position: absolute;
+    top: 0%;
+    left: 3.5%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #1f6c75;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+container4 {
+    position: absolute;
+    top: 0%;
+    left: 7%;
+    width: 3.5%;
+    height: 100%;
+    background-color: #8eb7bd;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+container{
+    position: absolute;
+    left: 17vw;
+    top: 25vh;
+    width: 70vw;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1vw;
+    background-color: #a7c4c9;
+}
+
+p{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
+nav{
+    position: absolute;
+    left: 75%;
+    width: 35%;
+    background-color: rgb(233, 224, 224);
+    padding-top: 4.2%;
+  }
+
+  .dropbtn {
+    background-color: transparent;
+    padding: 16px;
+    padding-right: 30px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    transition: all 0.5s ease;
+    font-size:16px; font-weight:500; text-transform:uppercase;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.5s ease;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size:16px; font-weight:500; text-transform:uppercase;
+    transition: all 0.5s ease;
+  }
+
+  .dropdown-content a:hover {background-color: #8eb7bd}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #8eb7bd;
+  }

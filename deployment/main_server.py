@@ -171,6 +171,10 @@ def render_retinal_page():
 def render_model():
     return render_template('model_details.html')
 
+@app.route('/support')
+def support():
+    return render_template('support.html')
+
 if __name__=="__main__":
     app.register_error_handler(HTTPException, handle_exception)
     app.run(host="0.0.0.0",port=5000)
