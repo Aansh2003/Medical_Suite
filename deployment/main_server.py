@@ -12,6 +12,19 @@ import functionality.email_sender as sender
 import math
 from werkzeug.exceptions import HTTPException
 from functionality.cloud_api import login
+import pyrebase 
+
+# Firebase Initialization
+
+with open('functionality/cloud_api/firebase_credentials.txt', 'r') as f:
+    creds = [line.strip() for line in f]
+config = {
+    "apiKey": creds[0],
+    "authDomain": creds[1],
+    "databaseURL": creds[2],
+    "storageBucket": creds[3]
+}
+firebase = pyrebase.initialize_app(config)
 
 # Global variable declarations
 default = ('admin@admin.com','admin')
@@ -57,7 +70,7 @@ def login_signup():
                 session['username'] = email
                 return redirect('/home')
             
-            if(login.check_pass(email,password)):
+            if(login.check_pass(email,password, firebase)):
                 session['loggedin'] = True
                 session['id'] = id
                 id = id+1
@@ -71,7 +84,7 @@ def login_signup():
                     name = request.form['name_reg']
                     email = request.form['email_reg']
                     password = request.form['pass_reg']
-                    login.signup(name,email,password)
+                    login.signup(name,email,password, firebase)
                 else:
                     return render_template('index.html',info='Passwords do not match')
     return render_template('index.html')
