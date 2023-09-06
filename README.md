@@ -1,7 +1,7 @@
 # Medical Suite
  
 ## Project Description
-This is a ML/DL project to create a medical metastack which is able to detect various diseases based on scans and other data. Currently brain tumor detection and segmentation as well as retinal disease detection is fully operational and deployed.
+This is a ML/DL project to create a medical metastack which is able to detect various diseases based on scans and other data. Currently brain tumor detection and segmentation as well as retinal disease detection is fully operational and deployed. Databasing is done using Firebase API.
 
 ## Data
 The data containing the scans and images can be found [here](https://learnermanipal-my.sharepoint.com/:f:/g/personal/aansh_basu_learner_manipal_edu/ErL-RyCfpwhIiNbEX3MWweEBH_PLeMADin7jDo14BA_Ibw?e=N70qDk).
@@ -19,7 +19,7 @@ clone the repository onto your local system
 git clone https://github.com/Aansh2003/Medical_Suite.git
 ```
 
-Install NPM and JQuery
+Install NPM and JQuery (Optional)
 ```
 sudo apt install nodejs npm
 npm install jquery
