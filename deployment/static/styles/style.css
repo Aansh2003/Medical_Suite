@@ -156,6 +156,7 @@ header {
     transition: all .5s;
     padding-top: 1%;
     box-shadow: none;
+    border: 2px solid black;
 }
 
 .styled:hover {

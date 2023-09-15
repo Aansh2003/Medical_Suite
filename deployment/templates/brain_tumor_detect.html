@@ -21,46 +21,54 @@
     </container3>
     <container4>
     </container4>
+    <div class="main-container">
+        <div class="dot1">
+            <div class="head_2"><b>Model Accuracy</b></div>
+            <p class="body_2">Our model achieves 93% accuracy on classifying Brain Tumors</p>
+        </div>
+        <div class="dot2">
+            <div class="head"><b>How to use?</b></div>
+            <p class="body">Fill out your basic information and upload the MRI scan(PNG/JPG file) of a brain. Our model
+                will
+                detect the
+                presence of brain tumours and email the evaluation back to you within a couple of minutes.</p>
+        </div>
+        <div class="dot3">
+            <div class="head_3"><b>Contact us</b></div>
+            <p class="body_3">Placeholder text, ideally should have phone number and email ID.</p>
+        </div>
 
-    <div class="dot1">
-        <div class="head_2"><b>Model Accuracy</b></div>
-        <p class="body_2">Our model achieves 93% accuracy on classifying Brain Tumors</p>
-    </div>
-    <div class="dot2">
-        <div class="head"><b>How to use?</b></div>
-        <p class="body">Fill out your basic information and upload the MRI scan(PNG/JPG file) of a brain. Our model will
-            detect the
-            presence of brain tumours and email the evaluation back to you within a couple of minutes.</p>
-    </div>
-    <div class="dot3">
-        <div class="head_3"><b>Contact us</b></div>
-        <p class="body_3">Placeholder text, ideally should have phone number and email ID.</p>
-    </div>
-
-    <div class="container">
-        <form class="form-group" method="POST" enctype=multipart/form-data>
-            <h1 class="text-center">
-            </h1>
-            <div id="form">
-                <h3 class="text-white">User Details</h3>
-                <div id="input">
-                    <input type="text" id="input-group" placeholder="Full Name" name="fname" required><br>
-                    <input type="email" id="input-group" placeholder="Email Address" name="email" required>
-                </div><br>
-                <h3 class="text-white">Scan Details</h3>
-                <div id="input">
-                    <input type="file" id="input-group" placeholder="Upload Scan" name="scan" required>
+        <div class="container">
+            <form class="form-group" method="POST" enctype=multipart/form-data>
+                <h1 class="text-center">
+                </h1>
+                <div id="form">
+                    <h3 class="text-white">User Details</h3>
+                    <div id="input">
+                        <input type="text" id="input-group" placeholder="Full Name" name="fname" required><br>
+                        <input type="email" id="input-group" placeholder="Email Address" name="email" required>
+                    </div><br>
+                    <h3 class="text-white">Scan Details</h3>
+                    <div id="input">
+                        <input type="file" id="input-group" placeholder="Upload Scan" name="scan" required>
+                    </div>
+                    <line>
+                        <input class="help submit" type="submit" value="Upload">
+                        <button class="help" type="reset" class="btn-primary">Clear Form</button>
+                    </line>
+                    <a class="styled" href="/home">
+                        <div class="styled_div">Back</div>
+                    </a>
                 </div>
-                <line>
-                    <input class="help" type="submit" value="Upload">
-                    <button class="help" type="reset" class="btn-primary">Clear Form</button>
-                </line>
-                <a class="styled" href="/home">
-                    <div class="styled_div">Back</div>
-                </a>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </div>
+
+    <div class="loader">
+        
+    </div>
+    <script src="{{ url_for('static',filename='scripts/loader.js') }}"></script>
 </body>
 
 </html>

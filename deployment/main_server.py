@@ -81,10 +81,13 @@ def login_signup():
 
         elif(request.form.get('signup')):
                 if request.form['pass_reg'] == request.form['conf_pass_reg']:
+                    if len(request.form['pass_reg']) < 7:
+                        return render_template('index.html',info='Password too short')
                     name = request.form['name_reg']
                     email = request.form['email_reg']
                     password = request.form['pass_reg']
-                    login.signup(name,email,password, firebase)
+                    if not login.signup(name,email,password, firebase):
+                        return render_template('index.html',info='Registration failed')
                 else:
                     return render_template('index.html',info='Passwords do not match')
     return render_template('index.html')
